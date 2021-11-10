@@ -4,12 +4,100 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="test.css" />
-    <title>Erste css-Seite</title>
+    <meta name="author" content="Justus Siebert" />
+    <meta
+      name="description"
+      content="Dieser Tag beschreibt etwas ausführlicher was hier zu erwarten ist"
+    />
+    <link rel="stylesheet" href="css/standard.css" />
+    <title>Erste css-Seite auf Github</title>
   </head>
   <body>
     <header>
-      <h1>Das ist der Titel dieser Seite</h1>
+      <h1>Website zum Thema XYZ</h1>
+      <section class="portrait-header">
+        <img src="img/justus-siebert-400.jpg" alt="Justus Siebert" />
+      </section>
+
+      <nav class="main-navigation-top">
+        <ul>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="beispiel-anker-links.html">Testseite Ankerlinks</a></li>
+          <li><a href="beispiel-listen.html">Weiteres Thema: Listen</a></li>
+          <li><a href="thema-abc.html">Thema ABC</a></li>
+        </ul>
+      </nav>
     </header>
+    <main>
+      <section class="main-inner">
+        <article>
+          <header>
+            <h2>Thema ganz wichtig</h2>
+          </header>
+          <p>
+            Es geht um Barrierefreiheit, das ist schon wichtig, wird testweise
+            hier erläutert.
+          </p>
+          <p>
+            Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae,
+            aliam Aquitani, tertiam, qui <a href="#">ipsorum lingua Celtae</a>,
+            nostra Galli appellantur. Hi omnes lingua, institutis, legibus inter
+            se differunt. Gallos ab
+            <a href="#" target="_blank">Aquitanis Garunna flumen extern</a>, a
+            Belgis Matrona et Sequana dividit. Horum omnium fortissimi sunt
+            Belgae, propterea quod a cultu atque humanitate provinciae
+            longissime absunt minimeque ad eos mercatores saepe commeant atque
+            ea, quae ad effeminandos animos pertinent, important proximique sunt
+            Germanis, qui trans Rhenum incolunt, quibuscum continentur bellum
+            gerunt.
+          </p>
+          <section>
+            <h3>Ein Teilbereich davon ist Kontrast</h3>
+            <p>Der sollte stark genug sein, damit man alles gut lesen kann.</p>
+          </section>
+          <footer>Diese Idee wird unterstützt von Armin Laschet</footer>
+        </article>
+        <article>
+          <header>
+            <h2 class="primary-alternative-text-color">
+              Noch ein Thema, das auch nicht unwichtig ist: Gefunden werden
+            </h2>
+          </header>
+          <p>
+            Dieser Inhalt sollte auch gefunden werden, von Google, und damit
+            auch von Menschen. Darum sollten wir uns später noch um SEO kümmern.
+          </p>
+          <footer>Diese Idee wird unterstützt von Larry Page</footer>
+        </article>
+      </section>
+      <aside class="sidebar-right">
+        <section>
+          <h4>Nebenbei gibt es noch Kekse</h4>
+          <p>
+            Die sind für diese Website nebensächlich und volkswirtschaftlich
+            sogar schädlich. Als cookies können sie für eine Website sowohl
+            schädlich als auch nützlich sein.
+          </p>
+        </section>
+        <section>
+          <h4>Noch ein weiteres wichtiges Zitat:</h4>
+          <figure>
+            <blockquote>
+              <p>Zuviel Kompetenz macht unsympathisch!</p>
+            </blockquote>
+            <figcaption>
+              Bernd Stromberg, Leiter Schadensregulierung Capitol, und Philosoph
+              <cite>in gleichnamiger Serie, Staffel 1, Folge 3</cite>
+            </figcaption>
+          </figure>
+        </section>
+      </aside>
+    </main>
+    <footer>
+      <nav>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutzerklaerung.html">Datenschutz</a>
+      </nav>
+    </footer>
   </body>
 </html>
