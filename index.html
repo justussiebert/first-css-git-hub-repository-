@@ -9,6 +9,10 @@
       name="description"
       content="Dieser Tag beschreibt etwas ausführlicher was hier zu erwarten ist"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/normalize.css@latest/normalize.css"
+    />
     <link rel="stylesheet" href="css/standard.css" />
     <title>Erste css-Seite auf Github</title>
   </head>
@@ -16,15 +20,17 @@
     <header>
       <h1>Website zum Thema XYZ</h1>
       <section class="portrait-header">
-        <img src="img/justus-siebert-400.jpg" alt="Justus Siebert" />
+        <a href="./index.html"
+          ><img src="./img/justus-siebert-400.jpg" alt="Justus Siebert"
+        /></a>
       </section>
 
       <nav class="main-navigation-top">
         <ul>
-          <li><a href="profil.html">Profil</a></li>
+          <li><a href="./profil.html">Profil</a></li>
           <li><a href="beispiel-anker-links.html">Testseite Ankerlinks</a></li>
           <li><a href="beispiel-listen.html">Weiteres Thema: Listen</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="./kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
     </header>
@@ -54,7 +60,20 @@
           <section>
             <h3>Ein Teilbereich davon ist Kontrast</h3>
             <p>Der sollte stark genug sein, damit man alles gut lesen kann.</p>
+            <ul>
+              <li>Und hier einmal eine ungeordnete Liste</li>
+              <li>Eintrag zwei</li>
+              <li>Und noch ein Eintrag.</li>
+            </ul>
+            <p>
+              Und hier mal ein Satz mit einem kuren Zitat innerhalbe des Satzes,
+              weil <q cite="Asterix, Band IV, S. 12">alea iacta est</q>,
+              gesprochen von Julius, nach dem Überschreiten des Rubikon.
+              Eigentlich hat er es auf Griechisch gesagt, nämlich:
+              <q>ἀνερρίφθω κύβος</q>.
+            </p>
           </section>
+
           <footer>Diese Idee wird unterstützt von Armin Laschet</footer>
         </article>
         <article>
@@ -93,7 +112,7 @@
         </section>
       </aside>
     </main>
-    <footer>
+    <footer class="footer-global">
       <nav>
         <a href="impressum.html">Impressum</a>
         <a href="datenschutzerklaerung.html">Datenschutz</a>

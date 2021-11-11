@@ -162,7 +162,9 @@
 
 /*-- generel settings --*/
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 a {
@@ -170,12 +172,22 @@ a {
   transition: color 0.4s linear;
 }
 a[target="_blank"] {
+  /*
   color: #4b2eff;
+  */
+  text-decoration: none;
+}
+a[target="_blank"]::before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin-right: 4px;
 }
 a:hover {
   color: darkorange;
 }
-
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   background-color: #ffd39f;
   margin: 0;
@@ -254,6 +266,16 @@ body > header {
   border-radius: 15px;
   text-align: center;
 }
+p {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+.without-margin-to-bottom {
+  margin: 0;
+}
+hr {
+  margin: 3rem 0 3rem 0;
+}
 h1,
 h2,
 h3,
@@ -261,10 +283,58 @@ h4,
 h5,
 h6 {
   color: #73561c;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote p {
   font-family: "Merriweather", serif;
 }
 .primary-alternative-text-color {
   color: #003f03;
+}
+
+figure {
+  margin: 0;
+}
+blockquote {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: #7e0038;
+  position: relative;
+}
+/*-- because I want the text in the following lines not under the bracket --*/
+blockquote::before {
+  content: "”";
+  font-size: 2.8rem;
+  position: absolute;
+  top: -12px;
+  left: 0;
+}
+/*
+blockquote::after {
+  content: close-quote;
+}
+*/
+blockquote {
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote p:last-of-type::after {
+  /*
+  content: close-quote;
+  */
+  content: "“";
+}
+blockquote + figcaption {
+  font-style: italic;
+  font-size: 0.8rem;
 }
 
 /*-- header-elements --*/
@@ -294,7 +364,10 @@ h6 {
 }
 .main-navigation-top ul li a {
   position: relative;
+  /*
   background-color: #ffb92d;
+  */
+  background-color: #ffd072;
   padding: 5px 10px;
   color: #634200;
   text-decoration: none;
@@ -338,4 +411,53 @@ aside.sidebar-right {
   padding: 20px;
   background-color: #dbdbdb;
   border: 1px dashed #ccc;
+}
+
+/*-- footer --*/
+
+footer.footer-global {
+  text-align: center;
+  background-color: rgba(247, 209, 133, 0.8);
+}
+
+/*-- cv and table of content --*/
+.nav-anchor-table-of-content {
+  display: flex;
+  justify-content: center;
+}
+.nav-anchor-table-of-content > ul {
+  display: inline-block;
+}
+.nav-anchor-table-of-content ul {
+  list-style-type: none;
+}
+.nav-anchor-table-of-content ul li {
+  position: relative;
+}
+.nav-anchor-table-of-content ul li::before {
+  content: "";
+  border: solid currentColor;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-right: 0.4rem;
+  position: relative;
+  top: -4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.cv-title-time {
+  font-style: italic;
+  margin-bottom: 0.1rem;
+}
+.cv-article-inner h4 {
+  margin-bottom: 0.1rem;
+}
+.article-references-outer > article {
+  padding: 1rem;
+}
+/*-- ungerade: (2n + 1) -- */
+.article-references-outer > article:nth-child(even) {
+  background-color: #ffd072;
 }
