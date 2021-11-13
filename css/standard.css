@@ -161,7 +161,11 @@
 }
 
 /*-- generel settings --*/
-
+:root {
+  --standard-color-1: #73561c;
+  --standard-color-2: #003f03;
+  --standard-padding-1: 20px;
+}
 *,
 *::after,
 *::before {
@@ -187,6 +191,9 @@ a:hover {
 html,
 body {
   overflow-x: hidden;
+}
+html {
+  font-size: 18px;
 }
 body {
   background-color: #ffd39f;
@@ -282,7 +289,10 @@ h3,
 h4,
 h5,
 h6 {
+  /*
   color: #73561c;
+  */
+  color: var(--standard-color-1);
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -296,7 +306,10 @@ blockquote p {
   font-family: "Merriweather", serif;
 }
 .primary-alternative-text-color {
+  /*
   color: #003f03;
+  */
+  color: var(--standard-color-2);
 }
 
 figure {
@@ -408,7 +421,10 @@ aside.sidebar-right {
   max-width: 300px;
   top: 30px;
   right: 0;
+  /*
   padding: 20px;
+  */
+  padding: var(--standard-padding-1);
   background-color: #dbdbdb;
   border: 1px dashed #ccc;
 }
