@@ -7,3 +7,5 @@
 ### Noch ein Test. Hier steht inhaltlich nichts sinnvolles.
 
 ### Noch ein test, für terminal / github
+
+### Nochmal ein Test, ob das mit Git / Terminal / Github funktioniert
